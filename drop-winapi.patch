@@ -47,3 +47,4 @@ index 875504cc..800ba15c 100644
 +        || env::var("CROSVM_USE_SYSTEM_VIRGLRENDERER").unwrap_or_else(|_| "0".to_string()) != "0" || true
  }
  
+ /// Returns the target triplet prefix for gcc commands. No prefix is required
