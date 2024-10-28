@@ -1,4 +1,4 @@
-%global gitdate 20230913
+%global gitdate 20241028
 %global gitversion c3ad0e43e
 
 Name:	    rutabaga-gfx-ffi
