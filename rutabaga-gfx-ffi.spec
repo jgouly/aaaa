@@ -58,7 +58,7 @@ cd ..
 
 %build
 pushd ffi
-%cargo_build
+%cargo_build --features virgl_renderer
 %cargo_license_summary
 %{cargo_license} > ../LICENSE.dependencies
 popd
