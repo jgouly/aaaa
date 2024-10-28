@@ -67,7 +67,6 @@ pushd ffi
 install -D -m 755 target/rpm/librutabaga_gfx_ffi.so %{buildroot}%{_libdir}/librutabaga_gfx_ffi.so.0.1.2
 ln -s librutabaga_gfx_ffi.so.0.1.2 %{buildroot}%{_libdir}/librutabaga_gfx_ffi.so.0
 ln -s librutabaga_gfx_ffi.so.0.1.2 %{buildroot}%{_libdir}/librutabaga_gfx_ffi.so
-install -D -m 644 src/share/rutabaga_gfx_ffi.pc %{buildroot}%{_libdir}/pkgconfig/rutabaga_gfx_ffi.pc
 install -D -m 644 src/include/rutabaga_gfx_ffi.h %{buildroot}%{_includedir}/rutabaga_gfx/rutabaga_gfx_ffi.h
 popd
 
@@ -80,7 +79,6 @@ popd
 %dir %{_includedir}/rutabaga_gfx
 %{_includedir}/rutabaga_gfx/*.h
 %{_libdir}/librutabaga_gfx_ffi.so
-%{_libdir}/pkgconfig/rutabaga_gfx_ffi.pc
 
 %changelog
 * Sat Jan 27 2024 Fedora Release Engineering <releng@fedoraproject.org> - 0.1.2-3.20230913gitc3ad0e43e
