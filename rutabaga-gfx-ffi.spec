@@ -18,7 +18,7 @@ License:    BSD-3-Clause AND BSD-2-Clause AND MIT AND (MIT OR Apache-2.0) AND (U
 #VCS: https://chromium.googlesource.com/crosvm/crosvm
 # git snapshot.  to recreate, run:
 # ./make-git-snapshot.sh `cat commitid`
-Source0:    rutabaga-gfx-%{gitdate}.tar.xz
+Source0:    https://github.com/jgouly/aaaa/raw/refs/heads/f40/rutabaga-gfx-20241028.tar.xz
 Source1:    make-git-snapshot.sh
 
 # drop a Windows-specific dependency
