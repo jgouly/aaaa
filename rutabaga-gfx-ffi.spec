@@ -27,6 +27,7 @@ Patch0000:  drop-winapi.patch
 Patch0001:  set-soname.patch
 
 BuildRequires:  cargo-rpm-macros
+BuildRequires:  virglrenderer-devel
 
 # current bindgen limitation
 ExclusiveArch: x86_64 aarch64
