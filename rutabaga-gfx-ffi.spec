@@ -25,8 +25,6 @@ Source1:    make-git-snapshot.sh
 Patch0000:  drop-winapi.patch
 # set library SONAME correctly
 Patch0001:  set-soname.patch
-# set package.license
-Patch0002:  license.patch
 
 BuildRequires:  cargo-rpm-macros
 
