@@ -27,3 +27,23 @@ index 3a407c71..82bb0df4 100644
      // Write the .pc file to the output directory
      let mut pc_file = File::create(format!(
          "{}/{}/rutabaga_gfx_ffi.pc",
+diff --git a/build.rs b/build.rs
+index 875504cc..800ba15c 100644
+--- a/build.rs
++++ b/build.rs
+@@ -23,14 +23,14 @@ fn use_system_minigbm() -> bool {
+     println!("cargo:rerun-if-env-changed=CROSVM_BUILD_VARIANT");
+     println!("cargo:rerun-if-env-changed=CROSVM_USE_SYSTEM_MINIGBM");
+     env::var("CROSVM_BUILD_VARIANT").unwrap_or_default() == "chromeos"
+-        || env::var("CROSVM_USE_SYSTEM_MINIGBM").unwrap_or_else(|_| "0".to_string()) != "0"
++        || env::var("CROSVM_USE_SYSTEM_MINIGBM").unwrap_or_else(|_| "0".to_string()) != "0" || true
+ }
+ 
+ fn use_system_virglrenderer() -> bool {
+     println!("cargo:rerun-if-env-changed=CROSVM_BUILD_VARIANT");
+     println!("cargo:rerun-if-env-changed=CROSVM_USE_SYSTEM_VIRGLRENDERER");
+     env::var("CROSVM_BUILD_VARIANT").unwrap_or_default() == "chromeos"
+-        || env::var("CROSVM_USE_SYSTEM_VIRGLRENDERER").unwrap_or_else(|_| "0".to_string()) != "0"
++        || env::var("CROSVM_USE_SYSTEM_VIRGLRENDERER").unwrap_or_else(|_| "0".to_string()) != "0" || true
+ }
+ 
