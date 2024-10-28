@@ -12,3 +12,18 @@ index 78ae2bcb..b3024eda 100644
  [build-dependencies]
  pkg-config = "0.3"
  anyhow = "1.0.57"
+diff --git a/ffi/build.rs b/ffi/build.rs
+index 3a407c71..82bb0df4 100644
+--- a/ffi/build.rs
++++ b/ffi/build.rs
+@@ -32,6 +32,10 @@ Libs: -L${libdir} -lrutabaga_gfx_ffi
+ "###,
+     );
+ 
++    std::fs::create_dir_all(format!(
++        "{}/{}/",
++        env::var("CARGO_TARGET_DIR").as_deref().unwrap_or("target"),
++        env::var("PROFILE").unwrap())).unwrap();
+     // Write the .pc file to the output directory
+     let mut pc_file = File::create(format!(
+         "{}/{}/rutabaga_gfx_ffi.pc",
